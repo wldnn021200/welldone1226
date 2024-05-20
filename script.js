@@ -1,8 +1,11 @@
-function tambah() {
-    var bilangan1 = parseInt(document.getElementById("bilangan1").value);
-    var bilangan2 = parseInt(document.getElementById("bilangan2").value);
-    
-    var hasil = bilangan1 + bilangan2;
-    
-    document.getElementById("hasil").innerHTML = "Hasil penjumlahan: " + hasil;
+function calculate() {
+    const input1 = document.getElementById('input1').value;
+    const input2 = document.getElementById('input2').value;
+    const result = parseFloat(input1) + parseFloat(input2);
+
+    if (!isNaN(result)) {
+        document.getElementById('result').innerText = `Result: ${result}`;
+    } else {
+        document.getElementById('result').innerText = 'Please enter valid numbers.';
+    }
 }
